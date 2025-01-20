@@ -4,7 +4,7 @@ description = "can fast setup project (for luau, lune)"
 authors = ["kimpure"]
 repository = "https://github.com/kimpure/luau-project-fast-setup"
 license = "MIT"
-includes = ["README.md", "LICENSE.md", "bin.luau", "pesde.toml"]
+includes = ["readme.md", "licence.md", "bin.luau", "pesde.toml"]
 
 [target]
 environment = "lune"
