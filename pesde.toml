@@ -8,6 +8,7 @@ includes = ["README.md", "LICENSE.md", "bin.luau", "pesde.toml"]
 
 [target]
 environment = "lune"
+bin = "bin.luau"
 
 [indices]
 default = "https://github.com/pesde-pkg/index"
