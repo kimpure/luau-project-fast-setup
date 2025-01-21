@@ -1,5 +1,5 @@
 name = "kimpure/project_fast_setup"
-version = "0.1.0"
+version = "0.1.1"
 description = "can fast setup project (for luau, lune)"
 authors = ["kimpure"]
 repository = "https://github.com/kimpure/luau-project-fast-setup"

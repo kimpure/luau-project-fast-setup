@@ -19,9 +19,25 @@ local luauLuaurc = [[
 }
 ]]
 
+local robloxDefultProjectJson = [[
+{
+  "name": "simpleDataStore",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src"
+      }
+    }
+  }
+}
+]]
+
 local args = process.args
 
 local isLune = table.find(args, '--lune')
+local isRoblox = table.find(args, '--roblox')
 
 if not pathfs.isFile('.luaurc') then
     if isLune then
@@ -41,5 +57,9 @@ if not pathfs.isDir('tests') then
     pathfs.writeFile('tests/test.luau', '')
 end
 
-
+if isRoblox then
+    if not pathfs.isDir('default.project.json') then
+        pathfs.writeFile('default.project.json', robloxDefultProjectJson)
+    end
+end
 
