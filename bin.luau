@@ -15,7 +15,10 @@ local luneLuaurc = [[
 
 local luauLuaurc = [[
 {
-    "languageMode": "strict"
+    "languageMode": "strict",
+    "lint": {
+        "LocalShadow": false
+    }
 }
 ]]
 
@@ -32,6 +35,12 @@ local robloxDefultProjectJson = [[
     }
   }
 }
+]]
+
+local _gitignore = [[
+luau_packages
+lune_packages
+roblox_packages
 ]]
 
 local args = process.args
@@ -61,5 +70,9 @@ if isRoblox then
     if not pathfs.isDir('default.project.json') then
         pathfs.writeFile('default.project.json', robloxDefultProjectJson)
     end
+end
+
+if not pathfs.isFile('.gitignore') then
+    pathfs.writeFile('.gitignore', _gitignore)
 end
 
